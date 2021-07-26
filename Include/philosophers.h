@@ -20,14 +20,16 @@ typedef struct s_ut
 	int	ph_count;
 	int	time_of_life;
 	int	time_to_eat;
-	int time_to_sleep;
+	int	time_to_sleep;
 	int	num_of_meal;
 }   t_ut;
 
-int	ft_atoi(const char *nptr);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_itoa(int nb);
-size_t	ft_strlen(const char *str);
-int	test_int_max(char **argv, int i);
+int			ft_atoi(const char *nptr);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
+char		*ft_itoa(int nb);
+size_t		ft_strlen(const char *str);
+int			test_int_max(char **argv, int i);
+void		ft_sleep(long int time);
+long int	get_time(void);
 
 #endif

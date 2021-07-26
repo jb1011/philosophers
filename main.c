@@ -31,6 +31,12 @@ int	main(int argc, char **argv)
 {
 	t_ut	ut;
 
-	// init_args(argc, argv, &ut);
-	printf("%d", init_args(argc, argv, &ut));
+	if (init_args(argc, argv, &ut) == 1)
+	{
+
+		ut.philo = malloc(sizeof(t_phil) * ut.ph_count);
+	}
+	else
+		printf("ERROR IN ARGUMENTS");
+	return (0);
 }

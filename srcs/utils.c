@@ -40,3 +40,24 @@ int	test_int_max(char **argv, int i)
 	free(str);
 	return (1);
 }
+
+long int	get_time(void)
+{
+	long int	time;
+	struct timeval	curren_time;
+
+	time = 0;
+	gettimeofday(&curren_time, NULL);
+	time = (curren_time.tv_sec * 1000) + (curren_time.tv_usec / 1000);
+	return (time);
+}
+
+void	ft_sleep(long int time)
+{
+	long int		start;
+
+	start = 0;
+	start = get_time();
+	while ((get_time() - start) < time)
+		usleep(time / 10);
+}
