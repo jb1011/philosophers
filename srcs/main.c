@@ -1,4 +1,4 @@
-#include "Include/philosophers.h"
+#include "../Include/philosophers.h"
 
 int	init_args(int argc, char **argv, t_ut *ut)
 {
@@ -38,6 +38,7 @@ int	main(int argc, char **argv)
 	}
 	else
 		printf("ERROR IN ARGUMENTS");
+	printf("HELLO");
 	
 	return (0);
 }
